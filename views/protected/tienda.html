@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="/css/store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <nav class="store-nav slide-element">
+        <div class="nav-brand">
+            <i class="fa-solid fa-store"></i>
+            <span>Tienda Virtual</span>
+        </div>
+
+        <div class="nav-actions">
+            <button id="sessionsBtn" class="icon-btn" title="Mis sesiones activas">
+                <i class="fa-solid fa-display"></i>
+            </button>
+            <button id="cartBtn" class="icon-btn" title="Carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+            <div class="user-chip" id="userChip">
+                <i class="fa-solid fa-circle-user"></i>
+                <div class="user-chip-info">
+                    <span id="userName">Usuario</span>
+                    <small id="userType">cliente</small>
+                </div>
+            </div>
+            <button id="logoutBtn" class="icon-btn logout" title="Cerrar sesión">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="store-hero">
+        <h1 class="slide-element" id="heroTitle">¡Bienvenido a la tienda!</h1>
+        <p class="slide-element">Explora nuestro catálogo y encuentra lo que necesitas.</p>
+    </header>
+
+    <main class="store-grid" id="productsGrid">
+        <!-- Los productos se insertan dinámicamente aquí -->
+    </main>
+
+    <!-- Carrito lateral -->
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> Mi carrito</h3>
+            <button id="closeCart" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <strong id="cartTotal">$0.00</strong>
+            </div>
+            <button id="checkoutBtn" class="checkout-button">
+                <span class="btn-text">Finalizar compra</span>
+                <span class="btn-spinner" hidden></span>
+            </button>
+        </div>
+    </aside>
+    <div class="overlay" id="cartOverlay"></div>
+
+    <!-- Panel de sesiones activas -->
+    <aside class="sessions-drawer" id="sessionsDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-display"></i> Sesiones activas</h3>
+            <button id="closeSessions" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="sessions-list" id="sessionsList"></div>
+        <div class="cart-footer">
+            <button id="closeOtherSessionsBtn" class="checkout-button secondary">
+                Cerrar todas las demás sesiones
+            </button>
+        </div>
+    </aside>
+    <div class="overlay" id="sessionsOverlay"></div>
+
+    <!-- Modal de éxito de compra -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-card">
+            <i class="fa-solid fa-circle-check success-icon"></i>
+            <h2>¡Compra realizada!</h2>
+            <p id="successDetails"></p>
+            <button id="closeSuccessModal" class="submit-button">Seguir comprando</button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <footer class="store-footer">
+        <p>Made with ❤️ by <a href="#" target="_blank">CodeZenithAI</a></p>
+    </footer>
+
+    <script src="/js/store.js"></script>
+</body>
+</html>

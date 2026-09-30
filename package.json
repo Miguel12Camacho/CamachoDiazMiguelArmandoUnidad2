@@ -1,0 +1,31 @@
+{
+  "name": "authscreen-tienda-virtual",
+  "version": "1.0.0",
+  "description": "Sistema de autenticación con PostgreSQL (login, registro, recuperación de contraseña, multisesión y protección de rutas) conectado a una tienda virtual.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "auth",
+    "postgresql",
+    "express",
+    "tienda-virtual",
+    "oop"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-pg-simple": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "nodemailer": "^9.0.3",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

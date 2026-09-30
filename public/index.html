@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Tienda Virtual</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="auth-wrapper">
+        <div class="background-shape"></div>
+        <div class="secondary-shape"></div>
+
+        <!-- LOGIN -->
+        <div class="credentials-panel signin">
+            <h2 class="slide-element">Iniciar sesión</h2>
+            <div class="form-message slide-element" data-form="login"></div>
+            <form id="loginForm" novalidate>
+                <div class="field-wrapper slide-element">
+                    <input type="text" name="identificador" required autocomplete="username">
+                    <label>Usuario o correo</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <input type="password" name="password" required autocomplete="current-password">
+                    <label>Contraseña</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="field-wrapper slide-element forgot-wrapper">
+                    <a href="forgot-password.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <button class="submit-button" type="submit">
+                        <span class="btn-text">Entrar</span>
+                        <span class="btn-spinner" hidden></span>
+                    </button>
+                </div>
+
+                <div class="switch-link slide-element">
+                    <p>¿No tienes cuenta? <br> <a href="#" class="register-trigger">Regístrate</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="welcome-section signin">
+            <h2 class="slide-element">¡BIENVENIDO DE NUEVO!</h2>
+            <p class="slide-element">Inicia sesión para continuar hacia tu tienda virtual.</p>
+        </div>
+
+        <!-- REGISTRO -->
+        <div class="credentials-panel signup">
+            <h2 class="slide-element">Crear cuenta</h2>
+            <div class="form-message slide-element" data-form="registro"></div>
+            <form id="registerForm" novalidate>
+                <div class="field-wrapper slide-element half">
+                    <input type="text" name="nombre" required>
+                    <label>Nombre</label>
+                    <i class="fa-solid fa-id-badge"></i>
+                </div>
+
+                <div class="field-wrapper slide-element half">
+                    <input type="text" name="apellidos" required>
+                    <label>Apellidos</label>
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <input type="text" name="username" required autocomplete="username">
+                    <label>Usuario</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <input type="email" name="email" required autocomplete="email">
+                    <label>Correo electrónico</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <input type="password" name="password" required minlength="6" autocomplete="new-password">
+                    <label>Contraseña</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="field-wrapper slide-element select-wrapper">
+                    <select name="tipoUsuario" required>
+                        <option value="cliente" selected>Cliente</option>
+                        <option value="admin">Administrador</option>
+                    </select>
+                    <label class="select-label">Tipo de usuario</label>
+                    <i class="fa-solid fa-user-tag"></i>
+                </div>
+
+                <div class="field-wrapper slide-element">
+                    <button class="submit-button" type="submit">
+                        <span class="btn-text">Registrarme</span>
+                        <span class="btn-spinner" hidden></span>
+                    </button>
+                </div>
+
+                <div class="switch-link slide-element">
+                    <p>¿Ya tienes cuenta? <br> <a href="#" class="login-trigger">Inicia sesión</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="welcome-section signup">
+            <h2 class="slide-element">¡HOLA!</h2>
+            <p class="slide-element">Regístrate y descubre nuestra tienda virtual.</p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <p>Made with ❤️ by <a href="#" target="_blank">CodeZenithAI</a></p>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

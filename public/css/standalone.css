@@ -1,0 +1,105 @@
+.standalone-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    min-height: 480px;
+    border: 2px solid #00d4ff;
+    box-shadow: 0 0 25px #00d4ff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.standalone-shape {
+    position: absolute;
+    right: -120px;
+    top: -120px;
+    height: 320px;
+    width: 320px;
+    background: linear-gradient(45deg, #1a1a2e, #00d4ff);
+    transform: rotate(20deg);
+    border-radius: 40%;
+    opacity: .9;
+    animation: floatShape 6s ease-in-out infinite;
+}
+
+@keyframes floatShape {
+    0%, 100% { transform: rotate(20deg) translateY(0); }
+    50% { transform: rotate(35deg) translateY(15px); }
+}
+
+.standalone-card {
+    position: relative;
+    width: 100%;
+    padding: 50px 40px;
+    text-align: center;
+    z-index: 2;
+}
+
+.standalone-icon {
+    font-size: 42px;
+    color: #00d4ff;
+    margin-bottom: 14px;
+    display: inline-block;
+    transform: translateY(0);
+    transition: .7s ease;
+    transition-delay: .1s;
+}
+
+.standalone-card h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    transform: translateY(0);
+    opacity: 1;
+    transition: .7s ease;
+    transition-delay: .2s;
+}
+
+.standalone-text {
+    font-size: 14px;
+    opacity: .85;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    transform: translateY(0);
+    transition: .7s ease;
+    transition-delay: .3s;
+}
+
+.standalone-card .field-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 22px;
+    text-align: left;
+    transform: translateY(0);
+    opacity: 1;
+    transition: .7s ease;
+}
+
+.standalone-card form .field-wrapper:nth-of-type(1) { transition-delay: .4s; }
+.standalone-card form .field-wrapper:nth-of-type(2) { transition-delay: .5s; }
+.standalone-card form .field-wrapper:nth-of-type(3) { transition-delay: .6s; }
+
+.standalone-card .switch-link {
+    transition-delay: .7s;
+}
+
+.standalone-wrapper .slide-element {
+    animation: enterFromBottom .8s ease both;
+}
+
+@keyframes enterFromBottom {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.standalone-card .switch-link a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.standalone-card .switch-link a:hover {
+    text-decoration: underline;
+}
