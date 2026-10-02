@@ -43,11 +43,11 @@ ALTER TABLE session
 
 CREATE INDEX IDX_session_expire ON session (expire);
 
--- ------------------------------------------------------------
+-- -------------------------------------------------------------
 -- Registro de sesiones por usuario (manejo de multisesiones):
 -- permite ver y cerrar sesiones activas en distintos
 -- dispositivos/navegadores para un mismo usuario.
--- ------------------------------------------------------------
+-- -------------------------------------------------------------
 CREATE TABLE sesiones_usuario (
     id                SERIAL PRIMARY KEY,
     usuario_id        INTEGER NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
